@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *,
+    *::after,
+    *::before{
+
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+    body{
+
+        background-color: rgba(0, 0, 0, 0.938);
+        color: #eee;
+
+        /* Font */
+        font-family: sans-serif;
+        font-weight: 800;
+        height: 100vh;
+
+        /* Centerlise */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    body > div{
+
+        border: 1px solid rgba(238, 238, 238, 0.048);
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    } 
+    div::after,
+    div::before{
+
+        content:"";
+        display: block;
+        height: 0%;
+        width: 0%;
+        position: absolute;
+        border-radius: 15px;
+        transition: linear .3s;
+
+    }
+
+    div::after{
+
+        background-color: rgba(54, 54, 54, 0.185);
+        top:0;
+        left: 0;
+        
+    }
+    div::before{
+        
+        background-color: rgba(141, 141, 141, 0.034);
+        bottom: 0;
+        right: 0;
+
+    }
+
+    div:hover::after,
+    div:hover::before{
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+</style>
+<body>
+
+
+    <div>Click</div>
+
+</body>
+</html>
